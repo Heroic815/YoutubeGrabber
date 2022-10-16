@@ -42,6 +42,7 @@
             this.folderDialogButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.formatLabel = new System.Windows.Forms.Label();
+            this.downloadCompleteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.videoThumbnailPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,12 +195,27 @@
             this.formatLabel.TabIndex = 12;
             this.formatLabel.Text = "Format:";
             // 
+            // downloadCompleteLabel
+            // 
+            this.downloadCompleteLabel.AutoSize = true;
+            this.downloadCompleteLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadCompleteLabel.Font = new System.Drawing.Font("Manrope", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.downloadCompleteLabel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.downloadCompleteLabel.Location = new System.Drawing.Point(669, 301);
+            this.downloadCompleteLabel.Name = "downloadCompleteLabel";
+            this.downloadCompleteLabel.Size = new System.Drawing.Size(119, 44);
+            this.downloadCompleteLabel.TabIndex = 13;
+            this.downloadCompleteLabel.Text = "Done!";
+            this.downloadCompleteLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.downloadCompleteLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.downloadCompleteLabel);
             this.Controls.Add(this.formatLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.folderDialogButton);
@@ -240,5 +256,6 @@
         private Button folderDialogButton;
         private Label label3;
         private Label formatLabel;
+        private Label downloadCompleteLabel;
     }
 }

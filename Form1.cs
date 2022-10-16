@@ -1,3 +1,4 @@
+using System.Media;
 using System.Text.RegularExpressions;
 using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
@@ -15,6 +16,7 @@ namespace YoutubeDownloader
             InitializeComponent();
 
             downloadFormatBox.SelectedIndex = 0;
+            downloadCompleteLabel.ForeColor = Color.FromArgb(0, downloadCompleteLabel.ForeColor);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace YoutubeDownloader
         private async void button2_Click(object sender, EventArgs e)
         {
             await loadVideoAsync();
+            downloadCompleteLabel.Visible = false;
         }
 
         private async void checkEnterKeyPress(object sender, KeyEventArgs e)
@@ -75,19 +78,17 @@ namespace YoutubeDownloader
                 var streamInfo = streamManifest.GetVideoStreams().GetWithHighestVideoQuality();
                 var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
                 //string title = string.Join("", currentTitle.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
-                string title = currentTitle;
+                string title = Regex.Replace(currentTitle, @"[^\w\.@-]", ""); // Prevents illegal characters
                 await youtube.Videos.Streams.DownloadAsync(streamInfo, downloadPathTextBox.Text + @"\" + title + $".{streamInfo.Container}");
             }
+
+            SystemSounds.Exclamation.Play();
+            downloadCompleteLabel.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             downloadVideo();
-        }
-
-        private void downloadFormatBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void folderDialogButton_Click(object sender, EventArgs e)
