@@ -43,19 +43,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.formatLabel = new System.Windows.Forms.Label();
             this.downloadCompleteLabel = new System.Windows.Forms.Label();
+            this.downloadQualityBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.videoThumbnailPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Manrope", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Manrope Medium", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 59);
+            this.label1.Size = new System.Drawing.Size(397, 59);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Youtube Downloader";
+            this.label1.Text = "YoutubeGrabber";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // videoLinkTextBox
@@ -131,7 +133,6 @@
             this.downloadFormatBox.Name = "downloadFormatBox";
             this.downloadFormatBox.Size = new System.Drawing.Size(121, 23);
             this.downloadFormatBox.TabIndex = 8;
-            this.downloadFormatBox.SelectedIndexChanged += new System.EventHandler(this.downloadFormatBox_SelectedIndexChanged);
             // 
             // startButton
             // 
@@ -209,12 +210,42 @@
             this.downloadCompleteLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.downloadCompleteLabel.Visible = false;
             // 
+            // downloadQualityBox
+            // 
+            this.downloadQualityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(62)))));
+            this.downloadQualityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.downloadQualityBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadQualityBox.ForeColor = System.Drawing.Color.Gainsboro;
+            this.downloadQualityBox.FormattingEnabled = true;
+            this.downloadQualityBox.Items.AddRange(new object[] {
+            "Low",
+            "Medium",
+            "High"});
+            this.downloadQualityBox.Location = new System.Drawing.Point(498, 246);
+            this.downloadQualityBox.Name = "downloadQualityBox";
+            this.downloadQualityBox.Size = new System.Drawing.Size(121, 23);
+            this.downloadQualityBox.TabIndex = 14;
+            this.downloadQualityBox.SelectedIndexChanged += new System.EventHandler(this.downloadQualityBox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Manrope Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(498, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 22);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Quality:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.downloadQualityBox);
             this.Controls.Add(this.downloadCompleteLabel);
             this.Controls.Add(this.formatLabel);
             this.Controls.Add(this.label3);
@@ -233,7 +264,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Youtube Downloader";
+            this.Text = "YoutubeGrabber";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.videoThumbnailPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -257,5 +288,7 @@
         private Label label3;
         private Label formatLabel;
         private Label downloadCompleteLabel;
+        private ComboBox downloadQualityBox;
+        private Label label4;
     }
 }

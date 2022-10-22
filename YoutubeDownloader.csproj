@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>youtube_downloader_icon.ico</ApplicationIcon>
+    <AssemblyName>YoutubeGrabber</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="youtube_downloader_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="YoutubeExplode.Converter" Version="6.2.2" />

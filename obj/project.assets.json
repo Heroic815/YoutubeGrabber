@@ -296,7 +296,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\sonny\\Documents\\C# Programs\\YoutubeDownloader\\YoutubeDownloader.csproj",
-      "projectName": "YoutubeDownloader",
+      "projectName": "YoutubeGrabber",
       "projectPath": "C:\\Users\\sonny\\Documents\\C# Programs\\YoutubeDownloader\\YoutubeDownloader.csproj",
       "packagesPath": "C:\\Users\\sonny\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sonny\\Documents\\C# Programs\\YoutubeDownloader\\obj\\",

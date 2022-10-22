@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "YoutubeDownloader/1.0.0": {
-        "dependencies": {
-          "YoutubeExplode.Converter": "6.2.2"
-        },
-        "runtime": {
-          "YoutubeDownloader.dll": {}
-        }
-      },
       "AngleSharp/0.17.0": {
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -39,6 +31,20 @@
       "System.Text.Encoding.CodePages/5.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
         }
       },
       "YoutubeExplode/6.2.2": {
@@ -67,11 +73,6 @@
     }
   },
   "libraries": {
-    "YoutubeDownloader/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "AngleSharp/0.17.0": {
       "type": "package",
       "serviceable": true,
