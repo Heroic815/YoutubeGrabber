@@ -104,10 +104,8 @@ namespace YoutubeDownloader
 
                 var streamInfo = streamManifest.GetMuxedStreams().GetItemByIndex(quality);
                 var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
-                //string title = string.Join("", currentTitle.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                 string title = Regex.Replace(currentTitle, "[^a-zA-Z0-9_]+", " ");
-                //await youtube.Videos.Streams.DownloadAsync(streamInfo, downloadPathTextBox.Text + @"\" + title + $".{streamInfo.Container}");
-                await youtube.Videos.Streams.DownloadAsync(streamInfo, downloadPathTextBox.Text + @"\" + title + $".mp4");
+                await youtube.Videos.Streams.DownloadAsync(streamInfo, downloadPathTextBox.Text + @"\" + title + $".mp4"); // $".{streamInfo.Container}
             }
 
             SystemSounds.Asterisk.Play();
